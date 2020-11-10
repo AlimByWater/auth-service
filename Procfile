@@ -1,1 +1,1 @@
-web: auth-service.exe
+web: authservice
