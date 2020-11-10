@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"os"
 	"time"
 
 	"github.com/AlimByWater/auth-service/models"
@@ -18,7 +19,7 @@ import (
 var (
 	ctx                = models.GetContext()
 	client, collection = models.GetCollection(ctx)
-	SECRET_KEY         = "medods"
+	SECRET_KEY         = os.Getenv("SECRET_KEY")
 )
 
 type User struct {
