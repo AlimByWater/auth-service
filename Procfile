@@ -1,1 +1,1 @@
-web: authservice
+web: go run main.go
