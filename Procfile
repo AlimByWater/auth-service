@@ -1,1 +1,1 @@
-web: auth-service
+web: bin/auth-service
