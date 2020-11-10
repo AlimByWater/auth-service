@@ -1,1 +1,1 @@
-web: ./bin/auth-service.exeherok
+web: auth-service.exe
