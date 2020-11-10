@@ -1,1 +1,1 @@
-web: bin/authservice.exe
+web: bin/auth-service.exe
