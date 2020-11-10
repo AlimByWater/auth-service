@@ -11,6 +11,7 @@ import (
 func main() {
 	router := mux.NewRouter()
 
+	router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) { w.Write([]byte("AuthService")) })
 	router.HandleFunc("/token/{guid}", controllers.CreateToken).Methods("GET")
 	router.HandleFunc("/refresh", controllers.Refresh).Methods("POST")
 	router.HandleFunc("/token", controllers.RemoveToken).Methods("DELETE")
