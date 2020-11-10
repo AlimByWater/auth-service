@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"os"
 
 	"github.com/AlimByWater/auth-service/controllers"
 	"github.com/AlimByWater/auth-service/models"
@@ -11,7 +10,7 @@ import (
 )
 
 func main() {
-	port := os.Getenv("PORT")
+	//port := os.Getenv("PORT")
 	router := mux.NewRouter()
 
 	router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) { fmt.Fprintf(w, "AuthService") })
@@ -21,5 +20,5 @@ func main() {
 	router.HandleFunc("/token/{guid}", controllers.RemoveAllTokens).Methods("DELETE")
 	defer models.Disconnect()
 
-	http.ListenAndServe(":"+port, router)
+	http.ListenAndServe(":"+"8080", router)
 }
