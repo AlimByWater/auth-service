@@ -1,1 +1,1 @@
-web: bin
+web: .\bin\auth-service.exeherok
